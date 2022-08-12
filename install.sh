@@ -5,8 +5,9 @@ BLACK='\033[0m'
 
 printf "${GREEN}Installing apt package dependencies${BLACK}\n"
 sudo apt update -y
-sudo apt install -y lib32gcc1 lib32stdc++6 lib32tinfo5 lib32ncurses5 composer expect zip unzip \
-                    php7.2-cli php7.2-mbstring php7.2-sqlite \php7.2-bcmath php7.2-dom
+sudo apt install -y lib32gcc1 lib32stdc++6 libtinfo5 libncurses5 composer expect zip unzip \
+                    php7.4-cli php7.4-mbstring php7.4-sqlite3 \
+                    php7.4-bcmath php7.4-dom
 
 printf "${GREEN}Installing PHP dependencies with Composer${BLACK}\n"
 cd $SCRIPT_DIR && composer install
